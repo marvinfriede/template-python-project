@@ -1,20 +1,19 @@
 name: Test
 
-on: [push, pull_request]
-# on:
-#   push:
-#     paths-ignore:
-#       - "docs/**"
-#       - "*.md"
-#       - "*.rst"
+on:
+  push:
+    paths-ignore:
+      - "docs/**"
+      - "*.md"
+      - "*.rst"
 
-#   pull_request:
-#     paths-ignore:
-#       - "docs/**"
-#       - "*.md"
-#       - "*.rst"
+  pull_request:
+    paths-ignore:
+      - "docs/**"
+      - "*.md"
+      - "*.rst"
 
-#   workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   main:
@@ -27,10 +26,10 @@ jobs:
 
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Set up Python ${{ matrix.python-version }}
-      - uses: actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
