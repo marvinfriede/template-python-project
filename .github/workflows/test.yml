@@ -40,3 +40,7 @@ jobs:
 
       - name: Unittests with pytest
         run: pytest -svv -m "not large" --cov=project --cov-report=term-missing
+
+      # Coverage does not work for private repos
+      - name: Upload coverage to Codecov
+        run: codecov
