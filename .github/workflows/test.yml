@@ -2,6 +2,8 @@ name: Test
 
 on:
   push:
+    branches:
+      - master
     paths-ignore:
       - "docs/**"
       - "*.md"
@@ -43,6 +45,4 @@ jobs:
 
       # Coverage does not work for private repos
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          fail_ci_if_error: true
+        run: codecov
