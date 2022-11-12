@@ -43,4 +43,6 @@ jobs:
 
       # Coverage does not work for private repos
       - name: Upload coverage to Codecov
-        run: codecov
+        uses: codecov/codecov-action@v3
+        with:
+          fail_ci_if_error: true
