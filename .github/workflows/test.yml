@@ -21,7 +21,7 @@ jobs:
   main:
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-latest]
         python-version: ["3.7", "3.8", "3.9", "3.10"]
 
     runs-on: ${{ matrix.os }}
@@ -41,7 +41,7 @@ jobs:
           pip install .[dev]
 
       - name: Unittests with pytest
-        run: pytest -svv --cov=. --cov-report=term-missing test
+        run: pytest -svv --cov=./src --cov-report=term-missing test
 
       # Coverage does not work for private repos
       - name: Upload coverage to Codecov

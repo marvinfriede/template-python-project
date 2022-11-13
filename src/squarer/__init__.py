@@ -18,6 +18,7 @@ def main(argv: Sequence | None = None) -> int:
     parser.add_argument("number", type=float, help="Number to square.")
     args = parser.parse_args(argv)
 
+    # print result
     print(square(args.number))
 
     return 0
