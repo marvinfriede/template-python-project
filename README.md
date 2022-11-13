@@ -33,10 +33,10 @@ section must be given. Here, additional options for the code coverage report fro
 *When to use pytest, coverage and tox?*
 
 Personally, I mostly use just pytest without coverage to test in my working environment with `pytest -svv test` or a specific
-test module. Before committing, however, it is a good idea if your code also runs in different environments, which is where
-tox comes in. Running just `tox`, will test in all environments specified in the [tox.ini](tox.ini)'s envlist and may take some
-time. Certain environments can be selected with `tox -e py37`. Note that the tox must be able to find a Python interpreter for
-each version given in the envlist
+test module. Before committing, however, it is a good idea to check if your code also runs in different environments, which is where
+tox comes in. Running just `tox`, will test in all environments specified in [tox.ini](tox.ini)'s envlist and may take some
+time. Certain environments can be selected with `tox -e py37`. Note that tox must be able to find a Python interpreter for
+each version given in the envlist.
 
 <details><summary>How to provide the Python interpreters for tox.</summary>
 
@@ -70,3 +70,10 @@ Finally, some handy features of pytest you should be aware of:
 **Important!** CI in private repositories is generally limited (to x minutes of execution time).
 
 ...
+
+
+<br>
+
+## Additional tools
+
+[pre-commit.ci](https://github.com/apps/pre-commit-ci/)
