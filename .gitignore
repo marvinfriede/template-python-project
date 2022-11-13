@@ -169,15 +169,3 @@ cython_debug/
 
 # tensorboard
 *.pt.trace.json
-
-# data
-*.json
-*.csv
-*.txt
-coord
-struc.xyz
-.CHRG
-.UHF
-.SYM
-.resRC
-.res
