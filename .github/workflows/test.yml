@@ -21,8 +21,8 @@ jobs:
   main:
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        python-version: ["3.9", "3.10"]
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
 
     runs-on: ${{ matrix.os }}
 
@@ -38,11 +38,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install torch==1.11.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-          pip install numpy pytest pytest-cov codecov xitorch tad-dftd3
+          pip install codecov pytest pytest-cov tox
 
-      - name: Unittests with pytest
-        run: pytest -svv -m "not large" --cov=project --cov-report=term-missing
+      # with "-e py" tox runs the python version of the current environment
+      - name: Unittests with tox
+        run: tox -e py
 
       # Coverage does not work for private repos
       - name: Upload coverage to Codecov

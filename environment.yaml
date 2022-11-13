@@ -1,8 +1,6 @@
-name: test
+name: squarer
 channels:
   - defaults
   - conda-forge
 dependencies:
   - numpy
-  - pip:
-      - tad-dftd3==0.0.2
