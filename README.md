@@ -3,7 +3,7 @@
 This repository aims to provide a starting template for Python projects containing the most important configuration files
 (which have to be tailored for your project!) and an initial directory structure separating source code and tests.
 
-I tried to incorporate most "best practices" but in the end, most of the design choices and tools are just personal preferences. 
+I tried to incorporate most "best practices" but in the end, most of the design choices and tools are just personal preferences.
 
 <br>
 
@@ -22,7 +22,7 @@ Testing is done with `pytest` and `tox`. All tests go into the [test](test/) dir
 and modules as well as functions and classes within these starting with `test` (automatic test discovery).
 
 The [conftest.py](test/conftest.py) file is sort of a setup file that can be used to create additional configurations/hooks
-([small example](https://github.com/tbmalt/tbmalt/blob/main/tests/conftest.py)) and setup code (fixtures) for all tests.  
+([small example](https://github.com/tbmalt/tbmalt/blob/main/tests/conftest.py)) and setup code (fixtures) for all tests.
 
 The [requirements-tests.txt](test/requirements-tests.txt) file is not required by pytest but tox for setting up
 the test environment as specified in tox's config file [tox.ini](tox.ini). Furthermore, to run pytest from tox, the `commands`
@@ -56,7 +56,7 @@ Finally, some handy features of pytest you should be aware of:
  - fixtures: common setup for multiple tests (e.g., reading file or database connection)
  - parametrize: multiple test cases for single function
  - expected fails: testing if the code handles wrong inputs (`pytest.raises(Exception)` or `@pytest.mark.xfail`)
- 
+
  <br>
 
 ## Setup files and Packaging
@@ -67,6 +67,6 @@ Finally, some handy features of pytest you should be aware of:
 
 ## CI - Continuous Integration (with GitHub Actions)
 
-**Important!** CI in private repositories is generally limited (to x minutes of execution time). 
+**Important!** CI in private repositories is generally limited (to x minutes of execution time).
 
 ...
