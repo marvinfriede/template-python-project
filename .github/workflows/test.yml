@@ -38,10 +38,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install .[dev]
+          pip install codecov pytest pytest-cov tox
 
-      - name: Unittests with pytest
-        run: pytest -svv --cov=./src --cov-report=term-missing test
+      # with "-e py" tox runs the python version of the current environment
+      - name: Unittests with tox
+        run: tox -e py
 
       # Coverage does not work for private repos
       - name: Upload coverage to Codecov
