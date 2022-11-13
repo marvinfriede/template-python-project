@@ -11,6 +11,8 @@ from collections.abc import Sequence
 from .__version__ import __version__
 from .maths import square_a_number as square
 
+__all__ = ["__version__", "maths", "square"]
+
 
 def main(argv: Sequence | None = None) -> int:
     # get command line argument
