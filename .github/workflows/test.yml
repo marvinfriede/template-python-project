@@ -41,7 +41,7 @@ jobs:
           pip install .[dev]
 
       - name: Unittests with pytest
-        run: pytest -svv --cov=project --cov-report=term-missing
+        run: pytest -svv --cov=. --cov-report=term-missing
 
       # Coverage does not work for private repos
       - name: Upload coverage to Codecov
