@@ -1,5 +1,11 @@
 # Template for open-source Python projects
 
+![](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
+![Tests](https://github.com/marvinfriede/python-project/actions/workflows/test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/marvinfriede/python-project/branch/master/graph/badge.svg?token=UEKDZY459S)](https://codecov.io/gh/marvinfriede/python-project)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/marvinfriede/python-project/master.svg)](https://results.pre-commit.ci/latest/github/marvinfriede/python-project/master)
+[![code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 This repository aims to provide a starting template for Python projects containing the most important configuration files
 (which have to be tailored for your project!) and an initial directory structure separating source code and tests.
 
