@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install codecov pytest pytest-cov tox
+          pip install codecov tox
 
       # with "-e py" tox runs the python version of the current environment
       - name: Unittests with tox
