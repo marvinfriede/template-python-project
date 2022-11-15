@@ -25,7 +25,8 @@ All of the source code goes into the [src/\<project-name\>](src/squarer) directo
 ## Tests (pytest/tox)
 
 Testing is done with `pytest` and `tox`. All tests go into the [test](test/) directory. Pytest automatically finds all directories
-and modules as well as functions and classes within these starting with `test` (automatic test discovery).
+and modules as well as functions and classes within these matching `test_*.py`/`*_test.py` files, `Test*` classes, and `test_*`
+functions and methods (automatic test discovery).
 
 The [conftest.py](test/conftest.py) file is sort of a setup file that can be used to create additional configurations/hooks
 ([small example](https://github.com/tbmalt/tbmalt/blob/main/tests/conftest.py)) and setup code (fixtures) for all tests.
