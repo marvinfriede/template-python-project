@@ -70,6 +70,10 @@ Finally, some handy features of pytest you should be aware of:
 
 ...
 
+Additional points:
+- `setup.py` is not necessary if `pyproject.toml` is present
+
+
 <br>
 
 ## CI - Continuous Integration (with GitHub Actions)
