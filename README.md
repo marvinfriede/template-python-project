@@ -15,10 +15,11 @@ I tried to incorporate most "best practices" but in the end, most of the design 
 
 ## Source code
 
-All of the source code goes into the [src/\<project-name\>](src/squarer) directory. Here, some *dunder* files can be found:
- - [\_\_version\_\_.py](src/squarer/__version__.py): just the version number as string, used by config files
- - [\_\_init\_\_.py](src/squarer/__init__.py): entry point for the command line interface
- - [\_\_main\_\_.py](src/squarer/__main__.py): same as `__init__.py` allowing calls via `python -m <prog>`
+All of the source code goes into the [src/\<project-name\>](src/squarer) directory. Here, some _dunder_ files can be found:
+
+- [\_\_version\_\_.py](src/squarer/__version__.py): just the version number as string, used by config files
+- [\_\_init\_\_.py](src/squarer/__init__.py): entry point for program/library
+- [\_\_main\_\_.py](src/squarer/__main__.py): same as `__init__.py` allowing calls via `python -m <prog>`
 
 <br>
 
@@ -37,7 +38,7 @@ section must be given. Here, additional options for the code coverage report fro
 
 <br>
 
-*When to use pytest, coverage and tox?*
+_When to use pytest, coverage and tox?_
 
 Personally, I mostly use just pytest without coverage to test in my working environment with `pytest -svv test` or a specific
 test module. Before committing, however, it is a good idea to check if your code also runs in different environments, which is where
@@ -60,11 +61,18 @@ ln -s /opt/miniforge3/envs/py311/bin/python3.11 ~/bin/python3.11
 <br>
 
 Finally, some handy features of pytest you should be aware of:
- - fixtures: common setup for multiple tests (e.g., reading file or database connection)
- - parametrize: multiple test cases for single function
- - expected fails: testing if the code handles wrong inputs (`pytest.raises(Exception)` or `@pytest.mark.xfail`)
 
- <br>
+- fixtures: common setup for multiple tests (e.g., reading file or database connection)
+- parametrize: multiple test cases for single function
+- expected fails: testing if the code handles wrong inputs (`pytest.raises(Exception)` or `@pytest.mark.xfail`)
+
+<br>
+
+Further links:
+
+- check for [test pollution](https://github.com/asottile/detect-test-pollution) by randomizing the order of tests ([pytest-plugin](https://pypi.org/project/pytest-random-order/))
+
+<br>
 
 ## Setup files and Packaging
 
@@ -81,7 +89,6 @@ Additional points:
 **Important!** CI in private repositories is generally limited (to x minutes of execution time).
 
 ...
-
 
 <br>
 

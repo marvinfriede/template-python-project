@@ -14,7 +14,7 @@ from .maths import square_a_number as square
 __all__ = ["__version__", "maths", "square"]
 
 
-def main(argv: Sequence | None = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     # get command line argument
     parser = argparse.ArgumentParser()
     parser.add_argument("number", type=float, help="Number to square.")
