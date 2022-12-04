@@ -2,9 +2,7 @@
 Entry point for command line interface via `python -m <prog>`.
 """
 
-import sys
-
-from . import main
+from .cli import console_entry_point
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(console_entry_point())

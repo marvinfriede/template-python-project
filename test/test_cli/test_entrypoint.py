@@ -7,8 +7,9 @@ import pytest
 import squarer
 
 
-def test_main(capsys: pytest.CaptureFixture) -> None:
-    squarer.main(["1.0"])  # pylint: disable=too-many-function-args
+def test_entrypoint(capsys: pytest.CaptureFixture) -> None:
+    # pylint: disable=too-many-function-args
+    squarer.console_entry_point(["1.0"])
 
     out, err = capsys.readouterr()
     assert out == "1.0\n"

@@ -3,4 +3,10 @@ channels:
   - defaults
   - conda-forge
 dependencies:
+  - black
   - numpy
+  - pre-commit
+  - pylint
+  - pytest
+  - pytest-cov
+  - tox
