@@ -11,8 +11,13 @@ from squarer.maths import square_a_number
 
 
 @pytest.mark.parametrize("value", [1.0, 2, 3.0])
-def test_add(value: int | float) -> None:
+def test_squarer(value: int | float) -> None:
     assert pytest.approx(square_a_number(value)) == value * value
+
+
+def test_squarer_fail() -> None:
+    with pytest.raises(TypeError):
+        square_a_number("2")
 
 
 def test_dummy() -> None:

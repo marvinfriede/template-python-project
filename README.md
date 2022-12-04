@@ -11,6 +11,7 @@ This repository aims to provide a starting template for Python projects containi
 
 I tried to incorporate most "best practices" but in the end, most of the design choices and tools are just personal preferences.
 
+The following tools are used: black, codecov, pre-commit, pylint, pytest, pytest-cov, tox
 <br>
 
 ## Source code
@@ -42,8 +43,8 @@ _When to use pytest, coverage and tox?_
 
 Personally, I mostly use just pytest without coverage to test in my working environment with `pytest -svv test` or a specific
 test module. Before committing, however, it is a good idea to check if your code also runs in different environments, which is where
-tox comes in. Running just `tox`, will test in all environments specified in [tox.ini](tox.ini)'s envlist and may take some
-time. Certain environments can be selected with `tox -e py37`. Note that tox must be able to find a Python interpreter for
+`tox` comes in. Running just `tox`, will test in all environments specified in [tox.ini](tox.ini)'s envlist and may take some
+time. Certain environments can be selected with `tox -e py37`. Note that `tox` must be able to find a Python interpreter for
 each version given in the envlist.
 
 <details><summary>How to provide the Python interpreters for tox.</summary>
@@ -73,7 +74,12 @@ Finally, some handy features of pytest you should be aware of:
 
 Packaging is done with [`setuptools`](https://setuptools.pypa.io/en/latest/index.html), which is configured through the `pyproject.toml` and/or `setup.cfg`/`setup.py` files.
 
-<details><summary>`pyproject.toml` vs. `setup.cfg` vs `setup.py`</summary>
+<details>
+<summary>
+  <code>pyproject.toml</code> vs.
+  <code>setup.cfg</code> vs
+  <code>setup.py</code>
+</summary>
 
 The `setup.py` file is a Python script and configuration is passed through keyword arguments of `setuptools.setup()`. This is not recommended due to possible security and parsing issues. The same setup can be accomplished in a declarative style within `setup.cfg` and `setup.py` remains mostly empty only calling `setuptools.setup()`.
 The `pyproject.toml` file aims to unify configuration files including various tools like black or pytest. For packaging, it is very similar to `setup.cfg`. However, `pyproject.toml` has not been adopted as the default yet and many projects still use `setup.cfg` to declare the packaging setup. Note that `setup.py` is not necessary if a `pyproject.toml` is present.
@@ -87,7 +93,7 @@ The `pyproject.toml` file aims to unify configuration files including various to
 
 [](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html#using-a-src-layout)
 
-#### [`setup.cfg`](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html)
+#### `setup.cfg`
 
 - declarative configuration for setuptools
 - [_metadata_](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html#metadata): must at least contain _name_ and _version_
@@ -97,6 +103,7 @@ The `pyproject.toml` file aims to unify configuration files including various to
 - [_options.package_data_](https://setuptools.pypa.io/en/latest/userguide/datafiles.html#package-data): inclusion of other, non-Python files (marker files, data, ...)
   - alternative: `MANIFEST.in`
 - [_options.entry_points_](https://setuptools.pypa.io/en/latest/userguide/entry_point.html): entry point for command line interface
+- can also hold configuration of other tools
 
 <br>
 
@@ -106,7 +113,7 @@ The package can be installed with `pip install .` or something like `pip install
 
 ## CI - Continuous Integration (with GitHub Actions)
 
-**Important!** CI in private repositories is generally limited (to x minutes of execution time).
+**Important!** CI in private repositories is generally limited (to _x_ minutes of execution time).
 
 ...
 
@@ -115,3 +122,4 @@ The package can be installed with `pip install .` or something like `pip install
 ## Additional tools
 
 [pre-commit.ci](https://github.com/apps/pre-commit-ci/)
+[codecov](https://github.com/apps/codecov/)

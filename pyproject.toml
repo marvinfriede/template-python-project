@@ -17,3 +17,11 @@ disallow_untyped_defs = true
 warn_redundant_casts = true
 warn_unreachable = true
 warn_unused_ignores = true
+
+
+[tool.coverage.run]
+plugins = ["covdefaults"]
+source = ["./src"]
+
+[tool.coverage.report]
+fail_under = 50
