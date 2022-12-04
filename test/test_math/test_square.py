@@ -17,7 +17,7 @@ def test_squarer(value: int | float) -> None:
 
 def test_squarer_fail() -> None:
     with pytest.raises(TypeError):
-        square_a_number("2")
+        square_a_number("2")  # type: ignore
 
 
 def test_dummy() -> None:
