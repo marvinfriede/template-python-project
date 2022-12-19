@@ -33,9 +33,11 @@ functions and methods (automatic test discovery).
 The [conftest.py](test/conftest.py) file is sort of a setup file that can be used to create additional configurations/hooks
 ([small example](https://github.com/tbmalt/tbmalt/blob/main/tests/conftest.py)) and setup code (fixtures) for all tests.
 
-The [requirements-tests.txt](test/requirements-tests.txt) file is not required by pytest but tox for setting up
-the test environment as specified in tox's config file [tox.ini](tox.ini). Furthermore, to run pytest from tox, the `commands`
-section must be given. Here, additional options for the code coverage report from the `pytest-cov` plugin are given.
+The test environment for pytest is setup with the `setup.cfg` and/or `pyproject.toml` file. `tox` needs extra configuration
+which can be found in the *deps* section of [tox.ini](tox.ini). Some projects also use a `requirements-tests.txt` file that lists
+all test dependencies and is also given in the *deps* section with `deps = -rrequirements-tests.txt`.
+Furthermore, to run pytest from tox, the `commands` section must be given. Here, additional options for the code coverage report
+from the `pytest-cov` plugin are given.
 
 <br>
 
