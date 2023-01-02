@@ -11,7 +11,7 @@ This repository aims to provide a starting template for Python projects containi
 
 I tried to incorporate most "best practices" but in the end, most of the design choices and tools are just personal preferences.
 
-The following tools are used: black, codecov, pre-commit, pylint, pytest, pytest-cov, tox
+The following tools are used: black, covdefaults, coverage, pre-commit, pylint, pytest, tox
 
 <br>
 
