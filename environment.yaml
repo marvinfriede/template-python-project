@@ -1,12 +1,15 @@
+# conda env create -f environment.yaml
 name: squarer
 channels:
   - defaults
   - conda-forge
 dependencies:
   - black
+  - coverage
   - numpy
   - pre-commit
   - pylint
   - pytest
-  - pytest-cov
   - tox
+  - pip:
+      - covdefaults

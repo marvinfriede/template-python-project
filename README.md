@@ -1,6 +1,6 @@
 # Template for open-source Python projects
 
-![](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
+![Python versions](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
 ![Tests](https://github.com/marvinfriede/python-project/actions/workflows/test.yml/badge.svg)
 [![codecov](https://codecov.io/gh/marvinfriede/python-project/branch/master/graph/badge.svg?token=UEKDZY459S)](https://codecov.io/gh/marvinfriede/python-project)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/marvinfriede/python-project/master.svg)](https://results.pre-commit.ci/latest/github/marvinfriede/python-project/master)
@@ -12,6 +12,7 @@ This repository aims to provide a starting template for Python projects containi
 I tried to incorporate most "best practices" but in the end, most of the design choices and tools are just personal preferences.
 
 The following tools are used: black, codecov, pre-commit, pylint, pytest, pytest-cov, tox
+
 <br>
 
 ## Source code
@@ -34,8 +35,8 @@ The [conftest.py](test/conftest.py) file is sort of a setup file that can be use
 ([small example](https://github.com/tbmalt/tbmalt/blob/main/tests/conftest.py)) and setup code (fixtures) for all tests.
 
 The test environment for pytest is setup with the `setup.cfg` and/or `pyproject.toml` file. `tox` needs extra configuration
-which can be found in the *deps* section of [tox.ini](tox.ini). Some projects also use a `requirements-tests.txt` file that lists
-all test dependencies and is also given in the *deps* section with `deps = -rrequirements-tests.txt`.
+which can be found in the _deps_ section of [tox.ini](tox.ini). Some projects also use a `requirements-tests.txt` file that lists
+all test dependencies and is also given in the _deps_ section with `deps = -rrequirements-tests.txt`.
 Furthermore, to run pytest from tox, the `commands` section must be given. Here, additional options for the code coverage report
 from the `coverage` tool are given.
 
@@ -49,7 +50,8 @@ test module. Before committing, however, it is a good idea to check if your code
 time. Certain environments can be selected with `tox -e py37`. Note that `tox` must be able to find a Python interpreter for
 each version given in the envlist.
 
-<details><summary>How to provide the Python interpreters for tox.</summary>
+<details>
+<summary>How to provide the Python interpreters for tox.</summary>
 
 Unfortunately, this does not directly work with something like a conda environment but you can setup the environments and provide
 a symlink to a directory which is in your path.
@@ -125,3 +127,6 @@ The package can be installed with `pip install .` or something like `pip install
 
 [pre-commit.ci](https://github.com/apps/pre-commit-ci/)
 [codecov](https://github.com/apps/codecov/)
+
+[gitignore](https://www.toptal.com/developers/gitignore)
+[choose-a-license](https://choosealicense.com/)
