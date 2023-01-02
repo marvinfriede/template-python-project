@@ -37,7 +37,7 @@ The test environment for pytest is setup with the `setup.cfg` and/or `pyproject.
 which can be found in the *deps* section of [tox.ini](tox.ini). Some projects also use a `requirements-tests.txt` file that lists
 all test dependencies and is also given in the *deps* section with `deps = -rrequirements-tests.txt`.
 Furthermore, to run pytest from tox, the `commands` section must be given. Here, additional options for the code coverage report
-from the `pytest-cov` plugin are given.
+from the `coverage` tool are given.
 
 <br>
 
