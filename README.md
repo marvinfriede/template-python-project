@@ -123,10 +123,12 @@ The package can be installed with `pip install .` or something like `pip install
 
 <br>
 
-## Additional tools
+## More
 
-[pre-commit.ci](https://github.com/apps/pre-commit-ci/)
-[codecov](https://github.com/apps/codecov/)
+Tools
+- [pre-commit.ci](https://github.com/apps/pre-commit-ci/)
+- [codecov](https://github.com/apps/codecov/)
 
-[gitignore](https://www.toptal.com/developers/gitignore)
-[choose-a-license](https://choosealicense.com/)
+Websites
+- [create .gitignore](https://www.toptal.com/developers/gitignore)
+- [choose license](https://choosealicense.com/)
