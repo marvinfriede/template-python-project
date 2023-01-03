@@ -7,12 +7,15 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from squarer.maths import square_a_number
+from squarer.mymath import square_a_number
 
 
-@pytest.mark.parametrize("value", [1.0, 2, 3.0])
+@pytest.mark.parametrize("value", [1.0, 2, -3.0])
 def test_squarer(value: int | float) -> None:
-    assert pytest.approx(square_a_number(value)) == value * value
+    expected = value * value
+    actual = square_a_number(value)
+
+    assert pytest.approx(expected) == actual
 
 
 def test_squarer_fail() -> None:
@@ -21,10 +24,5 @@ def test_squarer_fail() -> None:
 
 
 def test_dummy() -> None:
-    arr = np.array([1.0]) / 3.0
-    print(arr)
-
-
-def test_error() -> None:
-    with pytest.raises(ZeroDivisionError):
-        _ = 1 / 0
+    # show effect of `conftest.py` by setting printoptions
+    print(np.array([1.0 / 3.0]))

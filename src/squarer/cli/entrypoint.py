@@ -7,7 +7,7 @@ from __future__ import annotations
 import argparse
 from collections.abc import Sequence
 
-from ..maths import square_a_number as square
+from ..mymath import square_a_number as square
 
 
 def console_entry_point(argv: Sequence[str] | None = None) -> int:
